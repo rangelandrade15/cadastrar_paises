@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>pagina em branco</title>
+    </head>
+    <style>
+        table, th, td {
+          border: 1px solid black;
+          padding: 5px;
+        }
+        table {
+          border-spacing: 15px;
+        }
+        </style>
+<body>
+    <p>Atividade programação Web II!</p>
+    <center>
+        <a href="/cadastra">Cadastrar</a>
+    <fieldset style="width: 500px;">
+        <table style="width:100%">
+            <tr>
+            <th>Id:</th>
+            <th>Nome:</th>
+            <th>Imagem:</th>
+            <th>Editar:</th>
+            <th>Exluir:</th>
+            </tr>
+        <% for(var p in paises){ %>
+            
+                    <tr>
+                        <td><%= paises[p].id %></td>
+                        <td><%= paises[p].name %></td>
+                        <td><%= paises[p].Imagem %></td>
+                        <td><a href="/editarPaises?nome=<%= paises[p].name %>&id=<%= paises[p].id %>">Editar</a></td>
+                        <td><a href="/deletarPaises?id=<%= paises[p].id %>">Excluir</a></td>
+                    </tr>
+                
+        <% } %>
+</table>
+    </fieldset>
+    </center>
+</body>
+</html>
